@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+
+        }
+
+        .container {
+            width: 100%;
+            padding: 0px 5%;
+        
+        }
+
+        .bg-img {
+            width: 100%;
+            background-color: lightcoral;
+        }
+
+        /* ------------nav top----------- */
+
+        .top-nav {
+            width: 100%;
+            height: 50px;
+            border-bottom: 3px double lightgrey;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            
+
+            background-image: url("./img/banner-img.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        nav .container {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        .btn-group {
+            width: 60%;
+            height: 100%;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-btn {
+            /* width: 10%; */
+            height: 70%;
+            /* background-color: wheat; */
+            color: ghostwhite;
+            font-weight: bolder;
+            border: gold 1px solid;
+            /* margin-right: 10%; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .movie-name {
+            width: 150px;
+            /* background-color: salmon; */
+            font-size: 20px;
+            color: ghostwhite;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .movie-name h1 {
+            margin: 0px;
+        }
+
+        .link-bar {
+            width: 12%;
+            height: 50px;
+            /* background-color: sandybrown; */
+
+            display: flex;
+            align-self: flex-end;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .twitter,
+        .facebook {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .twitter{
+            background-image: url("./icon/twitter-icon.png");
+        }
+
+        .facebook{
+            background-image: url("icon/fb-icon.png");
+        }
+
+        /* ----------nav bottom--------- */
+
+        /* ----------main top----------- */
+        main .container, footer .container{
+            background-image: url("./img/galaxy-bg2.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --------page-slider top------*/
+
+        .page-slider {
+            width: 100%;
+            height: 80px;
+            /* background-color: slateblue; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .page-btn {
+            width: 20%;
+            height: 40px;
+            background-color: lightpink;
+            font-size: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* -------page-slider bottom------*/
+
+        /* --------movie-plot top------*/
+
+        .movie-plot {
+            width: 100%;
+            /* height: 100vh; */
+            
+
+        }
+
+        .plot-img {
+            width: 100%;
+            height: 600px;
+            background-image: url("./img/wallpaperflare.com_wallpaper.jpg");
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        p {
+            width: 100%;
+            /* height: 350px; */
+            background: rgb(252,244,214);
+            background: radial-gradient(circle, rgba(252,244,214,1) 22%, rgba(3,16,94,1) 100%);
+            padding: 15px 15%;
+            margin: 0px;
+            text-align: center;
+            text-indent: 35px;
+            font-size: 18px;
+            white-space: pre-line;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .para {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .plot-title {
+            width: 150px;
+            height: 50px;
+            background-color: mediumaquamarine;
+            margin-left: 10%;
+        }
+
+        .right {
+            margin: 0px;
+            margin-right: 10%;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* --------movie-plot bottom------*/
+
+        /* --------producer-intro top------*/
+
+        .producer-intro {
+            width: 100%;
+            height: 100vh;
+            /* background-color: yellow; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .producer-img {
+            width: 500px;
+            height: 500px;
+            background-color: mediumpurple;
+            margin-right: 20px;
+        }
+
+        .intro-text {
+            width: 60%;
+            height: 500px;
+            background-color: mediumvioletred;
+            margin-left: 20px;
+        }
+
+        /* --------producer-intro bottom------*/
+
+        /* --------main-chara top------*/
+
+        .main-chara {
+            width: 100%;
+            height: 100vh;
+            /* background-color: turquoise; */
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chara1 {
+            width: 47%;
+            height: 100%;
+            /* background-color: mistyrose; */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .chara2 {
+            width: 47%;
+            height: 100%;
+            /* background-color: olivedrab; */
+
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+        .chara-img {
+            width: 100%;
+            height: 300px;
+            background-color: orange;
+        }
+
+        .chara-intro {
+            width: 100%;
+            height: 42%;
+            background-color: orangered;
+        }
+
+        /* --------main-chara bottom------*/
+
+        /* --------firm-review top------*/
+
+        .firm-review {
+            width: 100%;
+            height: 100vh;
+            /* background-color: darkkhaki; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reviewer {
+            width: 30%;
+            height: 600px;
+            background-color: palevioletred;
+        }
+
+        /* --------firm-review bottom------*/
+
+        /* ----------main bottom-------- */
+
+        /* ----------footer top-------- */
+
+        .footer-link {
+            width: 100%;
+            height: 100px;
+            background-color: peachpuff;
+        }
+
+        /* ----------footer bottom-------- */
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="banner">
+            <div class="container">
+                <div class="top-nav">
+                    <div class="movie-name">
+                        <h1>Interstellar</h1>
+                    </div>
+                    <div class="btn-group">
+                        <div class="nav-btn">Home</div>
+                        <div class="nav-btn">Reach Us</div>
+                        <div class="nav-btn">About</div>
+                    </div>
+                    <div class="link-bar">
+                        <div class="twitter">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="facebook">
+                            <a href="">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-marq"></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="bg-img">
+            <div class="container">
+                <div class="page-slider">
+                    <div class="page-btn">劇情大綱</div>
+                    <div class="page-btn">導演介紹</div>
+                    <div class="page-btn">主要角色</div>
+                    <div class="page-btn">影評推薦</div>
+                </div>
+            </div>
+        </div>
+        <div class="movie-plot">
+            <div class="plot-img para">
+                <div class="plot-title"></div>
+            </div>
+            <p>地球農作物因氣候轉變及枯萎病而經常失收，曾是美國航空暨太空總署的工程師和太空梭駕駛員的主角庫珀（Cooper）被迫成為農民以協助解決糧食危機。庫珀的10歲女兒墨菲（Murphy）發現其房間書架上的書本無故掉到地上，認為這是騷靈現象。不久後，一場沙塵暴在墨菲房間中留下二進制座標，二人驅車到達坐標位置後發現那是北美空防司令部（已成為美國國家航空暨太空總署的秘密基地）。
+                <br>基地負責人布蘭德教授（Dr. Brand）向庫珀透露土星系統內出現了蟲洞，認為外星智慧有意協助人類前往遙遠星系移居，總署在約十年前已派遣了十二名科學家穿越該蟲洞，各自降落在多個被認為有居住可能性的行星上，傳送回來的資料顯示其中一個以黑洞「巨人（Gargantua）」為中心的行星系統有三顆星球可能適合殖民。行星以降落的科學家名字命名：米勒（Miller）、艾德蒙斯（Edmunds）和曼恩（Mann）。
+                <br>庫珀答允布蘭德教授的要求，擔任太空船永續號（Endurance）的駕駛員前往執行拉撒路計畫（Lazarus mission）：A計劃為確認星球適居性後，透過布蘭德教授的重力方程式協助地球人類前往殖民；B計劃為帶著多個人類胚胎進行殖民，留在地球的人類則會滅絕。墨菲因擔心庫珀一去不回而深感憤怒，庫珀在二人沒有道別下離開，與布蘭德教授女兒艾米莉亞（Amelia）、物理學家羅米利（Romilly）、地質學家道爾（Doyle）和兩個機器人塔斯（TARS）與凱斯（CASE）前往太空登上永續號啟程。</p>
+            <div class="plot-img para right">
+                <div class="plot-title right"></div>
+            </div>
+            <div class="plot-text">眾人先到達米勒星；「巨人」龐大重力造成的重力時間膨脹使米勒星的一小時約為地球的七年。但眾人漏算了前幾年收到來自米勒的數據以此星球的時間而言其實是幾小時前，因此除羅米利與塔斯外一眾成員乘坐飛艇漫遊者號（Ranger）降落星球後，才發現地表只有一片汪洋且經常出現巨型海嘯，其海嘯的來襲使道爾喪生和延誤了回程。眾人返回永續號後發現對羅米利而言已度過了超過23年的時間。
+                <br>眾人認為至今只能選擇前往餘下兩個星球的其中一個，經過一番爭辯後終決定前往曼恩星。同時墨菲已與庫珀離開地球當年同齡，加入了美國航空暨太空總署協助布蘭德教授解開拯救地球人類所需要的重力方程式，但教授在健康惡化彌留之際向墨菲承認A計劃不可能實現。另一方面科學家曼恩被眾人從人工睡眠中喚醒後表示方程式因缺乏黑洞重力奇異點的數據而無法完成，因此永續號的真正目的並非拯救地球人類，庫珀因此十分憤怒與懊悔，打算放棄計畫、回到地球尋找家人。
+                <br>在稍後的營地尋找任務中，曼恩破壞了庫珀的太空面罩並表示所有宜居數據均假，目的是希望國家航空暨太空總署能派人前來救他。曼恩遺下待死的庫珀後奪取漫遊者號前往永續號，同時羅米利試圖從被曼恩拆解的機器人奇普（KIPP）中取得探測資料，觸動了詭雷引發爆炸身亡。艾米莉亞救回即將因吸入過多氨氣而窒息的庫珀，二人乘坐降落艇追趕曼恩。曼恩在與永續號對接不全下打開氣閘，產生的失控減壓使他身亡和導致永續號失控旋轉，庫珀成功對接永續號使其穩定下來。</div>
+            <div class="plot-img para">
+                <div class="plot-title"></div>
+            </div>
+            <div class="plot-text">永續號上的資源已不足以返回地球，因此二人駛向「巨人」，射出塔斯讓它收集重力奇異點的數據，在接收數據傳送回地球後以重力助推前往艾德蒙斯星實行B計劃。
+                <br>為減少永續號質量讓艾米莉亞逃生，庫珀讓自己駕駛的漫遊者號於耗盡燃料後分離進入黑洞，但在漫遊者號被毀彈射逃生後，他發現自己身處一個非線性流動的第五維度超正方體；庫珀至此明瞭未來超越了時空、進化到較高文明的人類創造了四維超正方體和蟲洞以拯救過去的人類，也明白自己亦是兒時墨菲遇上的幽靈、引導自己參與拉撒路計畫（命定悖論）。庫珀把塔斯取得的黑洞數據以重力波透過墨菲的手錶傳送給她；成人墨菲在回憶此事時終發現父親的訊息，完成了布蘭德教授的方程式使人類得以離開地球，前往環繞著土星運行的太空站居住。
+                <br>四維超正方體空間在數據傳送完畢後關閉，庫珀被送離蟲洞回到土星，被土星宇宙殖民地人員救起。此時他已離開地球91年，理論上而言已是124歲。庫珀在太空站上與年老垂死的墨菲重逢，但墨菲不欲父親目睹自己離世而讓他離開，並說服他前往去尋找在艾德蒙斯星球上的艾米莉亞。電影最終庫珀與塔斯搭乘一艘次世代漫遊者號前往艾德蒙斯星。</div>
+        </div>
+        <div class="bg-img">
+            <div class="container">
+                <div class="producer-intro">
+                    <div class="producer-img"></div>
+                    <div class="intro-text"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-img">
+            <div class="container">
+                <div class="main-chara">
+                    <div class="chara1">
+                        <div class="chara-img"></div>
+                        <div class="chara-intro"></div>
+                    </div>
+                    <div class="chara2">
+                        <div class="chara-img"></div>
+                        <div class="chara-intro"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-img">
+            <div class="container">
+                <div class="firm-review">
+                    <div class="reviewer">
+                        <div class="reviewer-img"></div>
+                        <div class="review"></div>
+                    </div>
+                    <div class="reviewer"></div>
+                    <div class="reviewer"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="bg-img">
+            <div class="container">
+                <div class="footer-link">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
